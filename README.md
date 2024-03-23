@@ -1,3 +1,22 @@
+:fr: French repo about a french Website
+
+Le site de J.M. Doudoux est une incroyable mine d'information, en particulier en ce qui concerne le langage Java.
+
+Mais ce thème clair me brule les yeux à chaque fois que je le consulte.
+
+![thème clair](./media/light.jpg)
+
+C'est pourquoi, j'ai écrit un script à coller dans la console, qui active le thème sombre (à condition que votre navigateur soit en thème sombre), avec en bonus une table de matière pour simplifier la navigation entre les chapitres de la page.
+
+### Le résultat
+
+![thème sombre](./media/dark.jpg)
+
+### Le script
+
+#### :warning: Pour des raisons de sécurité, ne coller jamais un script dans la console de votre navigateur à moins de comprendre exactement ce qu'il fait :warning:
+
+```js
 // activation theme sombre
 document.querySelector('link[href="prism.css"]').remove();
 document.querySelectorAll('div[align="justify"] [bgcolor]').forEach(el => el.removeAttribute('bgcolor'));
@@ -79,3 +98,4 @@ tocStyle.innerHTML = `
 tocContainer.append(tocStyle);
 
 document.querySelector("body").append(tocContainer);
+```
